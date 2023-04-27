@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            box-sizing:inherit;
+        }
+        body {
+            background:url("https://wallpapercave.com/wp/wp4944566.jpg");
+            background-size: cover;
+        
+            color: antiquewhite;
+            background-color: rgba(0,0,0,0.5);
+            width:100%;
+            font-size: 18px;
+            border-radius: 10px;
+            border:1px solid rgba(255,255,255,0.3);
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            color:#fff;
+            
+        }
+         b {
+            color: antiquewhite;
+         }
+        label{
+            font-family: sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            
+        }
+        .btnstyle {
+            width: 100px;
+        	padding: 7px;
+            font-size: 16px;
+            font-family: sans-serif;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(250,100,0,0.8);
+            color: #fff;
+            cursor: pointer;
+            border:1px solid rgba(255,255,0.3);
+            box-shadow: 20px 20px 20px 10px rgb(185, 112, 112);
+            margin-bottom:20px;
+        }
+        .go{
+            width:200px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline:0;
+            padding:7px;
+            background-color: #ca9b9b;
+            box-shadow: 20px 20px 50px 10px rgb(166, 166, 218) inset;
+            
+        }
+        .go1{
+            box-shadow: 20px 20px 20px 10px rgb(185, 112, 112);
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {%for message in messages %}
+    <center><b>{{message}}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %} 
+<body>
+    <center class="go1">
+    <h1 >Register here</h1></center>
+    <div class="go" style="margin-left:42%; margin-top:5%">
+    <form method="POST">
+        <label>Faculty Id:</label>
+        <p><input placeholder="Enter Faculty id"  type="text" name="faculty" required/></p>
+        <label>Name:</label>
+        <p><input placeholder="Enter Name" type="text" name="name" required/></p>
+        <label>Gender:</label>
+        <p><input placeholder="Enter Group name" type="text" name="gender" required/></p>
+        <label>Email</label>
+        <p><input placeholder="Enter Email" type="email" name="email" required></p>
+        <label>Password:</label>
+        <p><input placeholder="Enter password" type="text" name="password" required/></p>
+        
+        
+        <button class="btnstyle">Register</button><br>
+        <a  href="{{url_for('login')}}" target="_blank">Already Have an Account?</a>
+    </form>
+</div>
+
+</body>
+</html>

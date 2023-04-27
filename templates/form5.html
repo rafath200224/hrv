@@ -1,0 +1,124 @@
+<html>
+<head>
+<style>
+    #question {
+      font-size: 15px;
+      font-weight: bold;
+      color: #4c4c4c;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+      
+    }
+    
+    #question:hover {
+      background-color:rgb(231, 221, 221);
+      cursor: pointer;
+    }
+    
+    #question img {
+      height: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
+        
+    }
+    body{
+        background-color: rgb(120, 224, 165);
+        
+        
+    }
+    .fname{
+        height: 25px;
+        width:200px;
+    }
+    
+    </style>
+</head>
+    <body>
+        <form method="POST">
+    <label>Roll no</label>
+    <input type="number" name="rollno">
+    <label>Name</label>
+    <input type="Name" name="name">
+    <label>Section</label>
+    <select name="section">
+        <option>B.sc MSCs</option>
+        <option>B.sc MPCs</option>
+        <option>B.sc MSDs</option>
+        <option>B.sc CAME</option>
+        <option>BA EMS</option>
+        <option>B.com General</option>
+        <option>BCA</option>
+        <option>B.sc Honors</option>
+        <option>BBA</option>
+        <option>BBA BA</option>
+    </select><br>
+    <label for="question">1.Did the placement process match your skillset and area of interest?</label><br>
+    <input type="radio" name="one" value="Yes" >Yes<br>
+    <input type="radio" name="one" value="No">No<br>
+
+    <label for="question">2.How satisfied were you with the overall placement process?</label><br>
+    <select class="fname" name="two">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>  <br>  
+    <label for="question">3.How was the selection process conducted by the placement team?</label><br>
+    <select class="fname" name="three">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">4.Were you adequately informed about the placement process and the requirements?</label><br>
+    <input type="radio" name="four" value="Yes" >Yes<br>
+    <input type="radio" name="four" value="No">No<br>
+
+    <label for="question">5.Were you provided with enough guidance and support during the placement process ?</label><br>
+    <input type="radio" name="five" value="Yes" >Yes<br>
+    <input type="radio" name="five" value="No">No<br>
+
+    <label for="question">6.Did you receive adequate training and preparation for the placement process</label><br>
+    <input type="radio" name="six" value="y" >Yes,it is.<br>
+    <input type="radio" name="six" value="a">may be.<br>
+    <label for="question">7.Was the placement process efficient and weel-organized?</label><br>
+    <select class="fname" name="seven">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">8.Was the placement process fair and transparent?</label><br>
+    <select class="fname" name="eight">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">9.Were you given equal opportunities as other candidates during placement process?</label><br>
+    <input type="radio" name="nine" value="Yes" >Yes<br>
+    <input type="radio" name="nine" value="No">No<br>
+    <label for="question">10.Were your expectations from the placement process met?if yes explain.</label><br>
+    <textarea id="feedback" name="ten" rows="5" cols="50" placeholder="please share your views here"></textarea><br>
+	<label>Overall Satisfaction</label>
+    <input type="range" id="points" name="points" min="0" max="100" value="50" oninput="sliderValue.value=this.value">
+    <output id="sliderValue">50</output>
+    <br><input type="submit"/>
+</form>
+    </body>
+<html>

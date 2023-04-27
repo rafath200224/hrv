@@ -1,0 +1,37 @@
+#go{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    border:none;
+    background-color:yellowgreen;
+}
+#go:hover{
+    color:#c90202;
+}
+.bgimg{
+    background-image: url('https://estudentbook.com/admin/img/institute_images/1629441117-Sri%20Durga%20Malleswara%20Siddhartha%20Mahila%20Kalasala-01.jpg');
+    background-size: cover;
+    height:40vh;
+    width:100%;
+    
+}
+#contact{
+    background-color: grey;
+    padding-bottom: 4em;
+}
+.socialicons{
+    font-size:40px;
+    cursor:pointer;
+}
+#icenter{
+    text-align: center;
+}
+.fa-brands{
+    color:white;
+}
+.fa-facebook,.fa-instagram,.fa-linkedin{
+    margin:40px;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-linkedin:hover{
+    color:#c90202;
+}

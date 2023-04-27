@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    
+    <link rel="stylesheet" href="static/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/171a4c5a07.js" crossorigin="anonymous"></script>
+  <style>
+    *{
+      padding: 0;
+      margin:0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #go{
+    
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    border:none;
+    float: left;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+    text-transform: uppercase;
+    
+   
+}
+#go:hover{
+    color:#c90202;
+}
+.bgimg{
+    background-image: url('https://estudentbook.com/admin/img/institute_images/1629441117-Sri%20Durga%20Malleswara%20Siddhartha%20Mahila%20Kalasala-01.jpg');
+    background-size: cover;
+    height:40vh;
+    width:100%;
+    
+    margin-bottom: 5%;
+    
+}
+
+
+
+  
+
+
+#contact{
+    background-color: grey;
+    padding-bottom: 4em;
+}
+.socialicons{
+    font-size:40px;
+    cursor:pointer;
+}
+#icenter{
+    text-align: center;
+}
+.fa-brands{
+    color:white;
+}
+.fa-facebook,.fa-instagram,.fa-linkedin{
+    margin:40px;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-linkedin:hover{
+    color:#c90202;
+}
+.apple{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+  color: rgb(18, 18, 114);
+}
+.ball{
+  
+  color:darkcyan;
+}
+
+#aboutus{
+  box-shadow: 20px 20px 50px 10px rgb(166, 207, 105) inset;
+  color:goldenrod;
+}
+  </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {%for message in messages %}
+    <center><b>{{message}}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <img src="http://www.siddharthamahila.ac.in/images/sdm_logo.jpg"  style="width:100%;height: 20%">
+    {% block heading %}
+    <div class="fixed-center">
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+          
+            <a class="navbar-brand" href="#"><img src=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+               
+                <a class="nav-link active" href="#"id="go">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#aboutusSection" id="go">About Us</a>
+                
+                <a class="nav-link" href="#contactSection" id="go">Contact Us</a>
+                <a class="nav-link" href="{{url_for('login')}}" id="go">Login</a>
+                <a class="nav-link" href="{{url_for('register')}}" id="go">Register</a>
+              </div>
+            </div>
+        </nav>
+  </div>
+  {% endblock %}
+          <div class="bgimg">
+            
+           
+            
+        </div>
+        
+        {% block content %}
+        <div id="aboutusSection">
+          <section id="aboutus">
+            <div class="container">
+              <h1 class="text-center pt-3 pb-3 " style="color:white;">About Us</h1>
+              <div class="column">
+
+                
+                <h3 class="apple"><marquee>Brief Report Of The College</marquee></h4>
+                <h4 class="ball"><i>‘‘A Quality Education has the power to transform societies in a single generation, by providing students knowledge, necessary skills and confidence to reach their full potential’’</i>
+                </h4>
+                <p class="cat"> The establishment of Siddhartha Academy of General and Technical Education in 1975 miraculously transformed Vijayawada which was hitherto educational Sahara into an educational Niagara.  Siddhartha Academy constitutes a highly motivated team of professionals with a common Vision and clear perception about the dynamic change to be brought in the field of education. In its fruitful journey of 44 long years, the Academy established 18 educational institutions to its credit.<br>
+                The college is spread over an area of 8.22 acres . It is located at the heart of the city and is within a stone’s throw to the main road. The college is situated in a pollution free residential area. The college is a four storied U-shaped building with 62 classrooms, well-stacked library, laboratories, Departments, Administrative Office, Physical Fitness Center, a Seminar hall, and a webinar hall with a seating capacity of 400 people each,  Audio- visual teaching room, a huge indoor stadium, two hostels, vast play grounds and a beautiful garden. The college is provided with all necessary amenities like canteen, water coolers, exhaust fans, elevators and separate vehicle parking for staff and students to cater  to their needs.<br>
+                The college attained autonomous status in the academic year 2003-04 and introduced Choice Based Credit System and Grading system in the year 2005-06. The college follows semester system and conducts scores of guest lectures, workshops, seminars and competitions in literary, cultural and sports for the over-all development of the students.
+
+
+                  </p>
+                
+                
+              </div>
+            </div>
+            
+          </div>
+          </section>
+         
+        <div id="contactSection">
+            <section id="contact">
+              <div class="container">
+                <h1 class="text-center pt-3 pb-3 " style="color:white;">Contact Us</h1>
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.5441368861843!2d80.64220727438148!3d16.498604784244883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fabb276f3e69%3A0xaeeeca3535d79031!2sSri%20Durga%20Malleswara%20Siddhartha%20Mahila%20Kalasala!5e0!3m2!1sen!2sin!4v1681881834136!5m2!1sen!2sin" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <form method="POST">
+                    <input class="form-control form-control-lg" type="text" name="name" placeholder="Name">
+                    <input class="form-control form-control-lg mt-3" type="email" name="email" placeholder="Email">
+                    <input class="form-control form-control-lg mt-3" type="text" name="message" placeholder="Subject">
+                  <button class="btn btn-success mt-3">Contact Us</button>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="icenter">
+                <div class="socialicons">
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            </section>
+          
+           {% endblock %}
+
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        </body>
+        </html>
+        
+    
+      
+            
+    
+</body>
+</html>

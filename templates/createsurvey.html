@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<style>
+  body{
+    background:url("https://storage.googleapis.com/fplsblog/1/2020/04/5ea95e2b1a55b.png");
+    background-size: cover;
+    width:350px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline:0;
+    padding:7px;
+    background-color: #b3ee8c;
+    box-shadow: 20px 20px 50px 10px rgb(166, 166, 218) inset;
+    margin-left: 40%;
+    
+  }
+  #dropdownMenuButton{
+    background-color: rgb(243, 88, 88);
+    color: black;
+  }
+  .btnstyle {
+            width: 100px;
+        	padding: 7px;
+            font-size: 16px;
+            font-family: sans-serif;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(250,100,0,0.8);
+            color: #fff;
+            cursor: pointer;
+            border:1px solid rgba(255,255,0.3);
+            box-shadow: 20px 20px 20px 10px rgb(185, 112, 112);
+            margin-bottom:20px;
+        }
+  label{
+            font-family: sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            
+        }
+</style>
+<body>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Preview Survey form
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="{{url_for('preview',file='form1')}}">Courses</a>
+          <a class="dropdown-item" href="{{url_for('preview',file='form2')}}">Workshops</a>
+          <a class="dropdown-item" href="{{url_for('preview',file='form3')}}">Library</a>
+          <a class="dropdown-item" href="{{url_for('preview',file='form4')}}">Hostel</a>
+          <a class="dropdown-item" href="{{url_for('preview',file='form5')}}">Placements</a>
+          <a class="dropdown-item" href="{{url_for('preview',file='form6')}}">NSS</a>
+        </div>
+
+      </div>
+      <form  method="POST">
+      <label>Select Survey Form</label>
+    <select name="form">
+        <option value="form1">Courses</option>
+        <option value="form2">Workshops</option>
+        <option value="form3">Library</option>
+        <option value="form4">Hostel</option>
+        <option value="form5">Placements</option>
+        <option value="form6">NSS</option>
+    </select>
+    <br>
+    <label>Enter duration:</label>
+    <input type="number" name="duration" placeholder="Enter time in seconds"><br><br>
+    <input class="btnstyle" type="submit">
+</form>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

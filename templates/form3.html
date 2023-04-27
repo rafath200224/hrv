@@ -1,0 +1,127 @@
+<html>
+<head>
+<style>
+    #question {
+      font-size: 15px;
+      font-weight: bold;
+      color: #4c4c4c;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+      
+    }
+    
+    #question:hover {
+      background-color:rgb(231, 221, 221);
+      cursor: pointer;
+    }
+    
+    #question img {
+      height: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
+        
+    }
+    body{
+        background-color: rgb(120, 224, 165);
+        
+        
+    }
+    .fname{
+        height: 25px;
+        width:200px;
+    }
+    
+    </style>
+    </head>
+    <body>
+        <form method="POST">
+            <label>Roll no</label>
+            <input type="number" name="rollno">
+            <label>Name</label>
+            <input type="Name" name="name">
+            <label>Section</label>
+            <select name="section">
+                <option>B.sc MSCs</option>
+                <option>B.sc MPCs</option>
+                <option>B.sc MSDs</option>
+                <option>B.sc CAME</option>
+                <option>BA EMS</option>
+                <option>B.com General</option>
+                <option>BCA</option>
+                <option>B.sc Honors</option>
+                <option>BBA</option>
+                <option>BBA BA</option>
+            </select><br>
+    <label for="question">1.Was the library easily accessible for you?</label><br>
+    <input type="radio" name="one" value="Yes" >Yes<br>
+    <input type="radio" name="one" value="No">No<br>
+
+    <label for="question">2.How satisfied were you with the library hours of opearation?</label><br>
+    <select class="fname" name="two">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>  <br>  
+    <label for="question">3.Did the library have sufficient seating or workspace for you?</label><br>
+    <select class="fname" name="three">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">4.Did you find the library staff friendly and helpful?</label><br>
+    <input type="radio" name="four" value="Yes" >Yes<br>
+    <input type="radio" name="four" value="No">No<br>
+
+    <label for="question">5.Was the library collection diverse and inclusive ?</label><br>
+    <input type="radio" name="five" value="Yes" >Yes<br>
+    <input type="radio" name="five" value="No">No<br>
+
+    <label for="question">6.Was the library well organized</label><br>
+    <input type="checkbox" name="six" value="y" >Yes,it is.<br>
+    <input type="checkbox" name="six" value="a">Easy to find books.<br>
+    <label for="question">7.Did you find the library's technology(e.g. computers,printers,scanners) easy to use?</label><br>
+    <select class="fname" name="seven">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">8.Was the library website user-friendly and informative?</label><br>
+    <select class="fname" name="eight">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">9.Did you receive sufficient information on library policies and procedures?</label><br>
+    <input type="radio" name="nine" value="Yes" >Yes<br>
+    <input type="radio" name="nine" value="No">No<br>
+    <label for="question">10.Did you encounter any issues with borrowing library materials?if yes explain.</label><br>
+    <textarea id="feedback" name="ten" rows="5" cols="50" placeholder="please share your views here"></textarea><br>
+    <label for="points">Overall satisfaction(between 0 and 100):
+
+    </label>
+    <input type="range" id="points" name="points" min="0" max="100" value="50" oninput="sliderValue.value=this.value">
+    <output id="sliderValue">50</output>
+    
+    <br><input type="submit"/>
+</form>
+    </body>
+</html>

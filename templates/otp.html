@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP REGISTRATION</title>
+    <style>
+      *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            
+        }
+        body {
+            background:url("https://wallpaperaccess.com/full/1691795.jpg");
+            background-size: cover;
+        
+            color: antiquewhite;
+            background-color: rgba(0,0,0,0.5);
+            width:100%;
+            font-size: 18px;
+            border-radius: 10px;
+            border:1px solid rgba(255,255,255,0.3);
+            
+            color:#fff;
+            
+        }
+         
+        
+        .btnstyle {
+            width: 100px;
+        	padding: 7px;
+            font-size: 16px;
+            font-family: sans-serif;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(250,100,0,0.8);
+            color: #fff;
+            cursor: pointer;
+            
+            box-shadow: 20px 20px 20px 10px rgb(185, 112, 112);
+            margin-bottom:20px;
+        }
+        .go{
+            width:300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline:0;
+            padding:7px;
+            background-color: #ca9b9b;
+            box-shadow: 20px 20px 50px 10px rgb(166, 166, 218) inset;
+           
+           
+        }
+    
+
+    </style>
+   
+    
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {%for message in messages %}
+    <center><b>{{message}}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <form  class="go"method="POST"action="{{url_for('otp',otp=otp,fid=fid,name=name,gender=gender,emailid=emailid,password=password)}}">
+        <h1>Enter OTP</h1>
+        <input type="text" name="otp"><br><br>
+        <button class="btnstyle">submit</button>
+    </form>
+       
+</body>
+</html>
+

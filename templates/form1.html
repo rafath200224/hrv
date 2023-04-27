@@ -1,0 +1,130 @@
+<html>
+<head>
+<style>
+    #question {
+      font-size: 15px;
+      font-weight: bold;
+      color: #4c4c4c;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+      
+    }
+    
+    #question:hover {
+      background-color:rgb(231, 221, 221);
+      cursor: pointer;
+    }
+    
+    #question img {
+      height: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
+        
+    }
+    body{
+        background-color: rgb(120, 224, 165);
+        
+        
+    }
+    .fname{
+        height: 25px;
+        width:200px;
+    }
+        </style>
+</head>
+    <body>
+        <form method="POST">
+        <label>Roll no</label>
+        <input type="number" name="rollno">
+        <label>Name</label>
+        <input type="Name" name="name">
+        <label>Section</label>
+        <select name="section">
+            <option>B.sc MSCs</option>
+            <option>B.sc MPCs</option>
+            <option>B.sc MSDs</option>
+            <option>B.sc CAME</option>
+            <option>BA EMS</option>
+            <option>B.com General</option>
+            <option>BCA</option>
+            <option>B.sc Honors</option>
+            <option>BBA</option>
+            <option>BBA BA</option>
+        </select><br>
+    <label for="question">1.How satisfied are you with the overall quality of the course?</label><br>
+    <select class="fname" name="one">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">2.Did the course meet your expectations?if not,please explain.</label><br>
+    <textarea id="feedback" name="two" rows="5" cols="50" placeholder="please share your experience here"></textarea><br>
+    <label for="question">3.How engaged did you feel during the course?</label><br>
+    <select class="fname" name="three">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">4.Were the course materials(textbook,reading,videos, etc.)helping in your learning?</label><br>
+    <input type="radio" name="four" value="Yes" >Yes<br>
+    <input type="radio" name="four" value="No">No<br>
+
+    <label for="question">5.Was the work load of the course appropriate for the level and credit value of the course?</label><br>
+    <input type="radio" name="five" value="Yes" >Yes<br>
+    <input type="radio" name="five" value="No">No<br>
+
+    <label for="question">6.How effective were the instructors in delivering course content and providing feedback?</label><br>
+    <select class="fname" name="six">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">7.Were the course organized in a way that facilitated your learning?</label><br>
+    <select class="fname" name="seven">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">8.How helpful was the course in preparing you for future courses or career opportunities?</label><br>
+    <select class="fname" name="eight">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">9.What aspects of the course did you find most valuable?</label><br>
+    <input type="text" id="question" name="nine" placeholder="Enter your answer..."><br>
+    <label for="question">10.What suggestions did you have for improving the course for the future?</label><br>
+    <textarea id="feedback" name="ten" rows="5" cols="50" placeholder="please share your views here"></textarea><br>
+    <label for="points">Overall Satisfaction(between 0 and 100):
+
+    </label>
+    <input type="range" id="points" name="points" min="0" max="100" value="50" oninput="sliderValue.value=this.value">
+    <output id="sliderValue">50</output>
+    <br><input type="submit"/>
+</form>
+    </body>
+</html>

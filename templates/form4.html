@@ -1,0 +1,126 @@
+<html>
+<head>
+<style>
+    #question {
+      font-size: 15px;
+      font-weight: bold;
+      color: #4c4c4c;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 2px solid #e0e0e0;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+      
+    }
+    
+    #question:hover {
+      background-color:rgb(231, 221, 221);
+      cursor: pointer;
+    }
+    
+    #question img {
+      height: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
+        
+    }
+    body{
+        background-color: rgb(120, 224, 165);
+        
+        
+    }
+    .fname{
+        height: 25px;
+        width:200px;
+    }
+    
+    </style>
+    </head>
+    <body>
+        <form method="POST">
+            <label>Roll no</label>
+            <input type="number" name="rollno">
+            <label>Name</label>
+            <input type="Name" name="name">
+            <label>Section</label>
+            <select name="section">
+                <option>B.sc MSCs</option>
+                <option>B.sc MPCs</option>
+                <option>B.sc MSDs</option>
+                <option>B.sc CAME</option>
+                <option>BA EMS</option>
+                <option>B.com General</option>
+                <option>BCA</option>
+                <option>B.sc Honors</option>
+                <option>BBA</option>
+                <option>BBA BA</option>
+            </select><br>
+    <label for="question">1.How did you hear about our hostel??</label><br>
+    <input type="text" id="question" name="one" placeholder="Enter your answer..."><br>
+
+    <label for="question">2.How was your check-in experience?</label><br>
+    <select class="fname" name="two">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>  <br>  
+    <label for="question">3.Were the hostel mess services satisfactory and hygienic?</label><br>
+    <select class="fname" name="three">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>  <br>
+    <br>
+    <label for="question">4.Was your room comfortable?</label><br>
+    <input type="radio" name="four" value="Yes" >Yes<br>
+    <input type="radio" name="four" value="No">No<br>
+
+    <label for="question">5.Was the staff friendly and helpful ?</label><br>
+    <input type="radio" name="five" value="Yes" >Yes<br>
+    <input type="radio" name="five" value="No">No<br>
+
+    <label for="question">6.Were the facilities well-maintained?</label><br>
+    <input type="checkbox" name="six" value="y" >In kitchen area.<br>
+    <input type="checkbox" name="six" value="a">Common area.<br>
+    <label for="question">7.How was the overall atmosphere of the hostel?</label><br>
+    <select class="fname" name="seven">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">8.Did you feel safe and secure during your stay?</label><br>
+    <select class="fname" name="eight">
+        <option value="s">select</option>
+
+        <option value="E">Excellent</option>
+        <option value="g">good</option>
+        <option value="a">average</option>
+        <option value="s">satisfactory</option>
+    </select>
+    <br>
+    <label for="question">9.Was the location of the hostel convenient for your needs?</label><br>
+    <input type="radio" name="nine" value="Yes" >Yes<br>
+    <input type="radio" name="nine" value="No">No<br>
+    <label for="question">10.Were there any issues with your booking or payment?if yes explain.</label><br>
+    <textarea id="feedback" name="ten" rows="5" cols="50" placeholder="please share your experience here"></textarea><br>
+    <label for="points">Overall Satisfaction(between 0 and 100):
+
+    </label>
+    <input type="range" id="points" name="points" min="0" max="100" value="50" oninput="sliderValue.value=this.value">
+    <output id="sliderValue">50</output>
+    
+    <br><input type="submit"/>
+</form>
+    </body>
+</html>
