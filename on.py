@@ -75,9 +75,7 @@ def login():
             session['user']=fid
             return redirect(url_for('dashboard'))
     return render_template('login.html')
-@app.route('/dashboard')
-def dashboard():
-    return render_template('child.html')
+
 @app.route('/logout')
 def logout():
     if session.get('user'):
@@ -157,7 +155,7 @@ def create():
             url=url_for("survey",token=stoken(surid,surname,duration),_external=True)
             cursor=mysql.connection.cursor()
             cursor.execute('insert into surveymeta (surid,username,html,url) values(%s,%s,%s,%s)',(surid,session.get('user'),surname,url))
-             mysql.connection.commit()
+            mysql.connection.commit()
             flash('Survey created successfully')
             return redirect(url_for('allsurveys'))
         return render_template('createsurvey.html')
@@ -202,7 +200,7 @@ def survey(token):
             points=request.form['points']        
             cursor=mydb.cursor(buffered=True)
             cursor.execute('insert into surveys values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',[sid,rollno,name,section,one,two,three,four,five,six,seven,eight,nine,ten,points])
-             mysql.connection.commit()
+            mysql.connection.commit()
             return 'Survey submitted successfully'
         return render_template(f'{html_page}.html')
     except Exception as e:

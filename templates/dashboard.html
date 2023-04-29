@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{{url_for('create')}}"><button>Create Surveys</button></a><br><br>
+    <button>All surveys</button><br><br>
+    <button>logout</button>
+
+</body>
+</html> -->
+{% extends "index.html" %}
+
+{% block content %}
+    <h2>welcome to your dashboard</h2>
+    
+{% endblock %} 
+{% block heading %}
+ <div class="fixed-center">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      
+        <a class="navbar-brand" href="#"><img src="https://wallpapercave.com/wp/wp3098986.jpg" width="100%" height="60vh"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+           
+             <!-- <a class="nav-link active" href="#"id="go">Home <span class="sr-only">(current)</span></a>  -->
+            <a class="nav-link" href="{{url_for('create')}}" id="go">Create Surveys</a>
+            
+            <a class="nav-link" href="{{url_for('allsurveys')}}" id="go">All surveys</a>
+            <a class="nav-link" href="{{url_for('logout')}}" id="go">Logout</a>
+            
+          </div>
+        </div>
+    </nav>
+</div>   
+
+	
+
+{% endblock %}
+
+
